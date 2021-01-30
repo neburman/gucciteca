@@ -125,13 +125,19 @@ article#imagenes{
     border: 2px solid black;
     width: 60%;
 }
+div#botones{
+    display: flex;
+    justify-content: center;
+    border: none;
+    width: 100%;
+}
 article#imagenes button{
     margin-left: 2.5%;
     font-size: 1vw;
 }
 article#imagenes img{
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
 }
 article#destacados{
     border: black 2px solid;
