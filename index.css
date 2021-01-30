@@ -125,6 +125,10 @@ article#imagenes{
     border: 2px solid black;
     width: 60%;
 }
+article#imagenes button{
+    margin-left: 2.5%;
+    font-size: 1vw;
+}
 article#imagenes img{
     width: 100%;
     height: 100%;
