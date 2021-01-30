@@ -1,0 +1,192 @@
+@font-face{
+    font-family: "BigShoulders";
+    src: url("fuentes/BigShouldersStencilText-Medium.ttf");
+}
+@font-face{
+    font-family: "Goldman";
+    src: url("fuentes/Goldman-Regular.ttf");
+}
+html{
+    background-color: #2e528b;
+}
+body{
+    width: 80%;
+    margin: 0 auto 0 auto;
+    background-color: whitesmoke;
+    border: black 2px solid;
+}
+header{
+    border-top: black 2px solid;
+    border-bottom: black 2px solid;
+    background-color: #335644;
+    margin-bottom: 1%;
+}
+h1{
+    font-family: BigShoulders, sans-serif;
+    text-align: center;
+    background-color: #c72030;
+    color: #c3b14a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header h1 a{
+    text-decoration: none;
+    color: #c3b14a;
+    font-size: 6vw;
+}
+header h1 a:hover{
+    text-decoration: none;
+    color: black;
+}
+header h1 img{
+    vertical-align: middle;
+    height: 15%;
+    width: 15%;
+    margin-left: 5%;
+}
+nav#lista{
+    border-top: black 2px solid;
+    border-bottom: black 2px solid;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    background-color: #335644;
+    margin-bottom: 1%;
+}
+ul#Enlaces{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    border-radius: 5%;
+}
+ul#Enlaces li{
+    display: flex;
+    list-style-type: none;
+    position: relative;
+    border: white 2px solid;
+    border-radius: 5%;
+    background-color: #333333;
+    padding: 1% 2.25%;
+    flex-flow: column wrap;
+}
+ul#Enlaces li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5vw;
+    text-align: center;
+}
+ul#Enlaces li ul{
+    display: none;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    margin: 5%;
+    padding: 0;
+}
+ul#Enlaces li:hover ul{
+    display: block;
+}
+ul#Enlaces li ul li{
+    display: flex;
+    position: relative;
+    margin-top: 0.5rem;
+}
+p, dl{
+    font-family: Goldman, sans-serif;
+    text-align: justify;
+    font-size: 0.8vw;
+}
+article#principal{
+    width: 100%;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 1% 0;
+}
+article#uno{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+article#dos{
+    display: flex;
+    justify-content: space-between;
+    width: 60.25%;
+    margin: 1% 0 1% 1%;
+}
+article#imagenes{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 1%;
+    border: 2px solid black;
+    width: 60%;
+}
+article#imagenes img{
+    width: 100%;
+    height: 100%;
+}
+article#destacados{
+    border: black 2px solid;
+    width: 30%;
+    text-align: justify;
+    margin-right: 1%;
+}
+article#destacados img{
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 100%;
+}
+h2.destacado{
+    font-family: BigShoulders, sans-serif;
+    text-align: center;
+    font-size: 200%;
+    background-color: #c72030;
+    color: #c3b14a;
+    margin-block-start: 0;
+    margin-inline-start: 0;
+    margin: 0;
+    border-bottom: 2px solid black;
+    font-size: 2.5vw;
+}
+article#preguntas{
+    border: black 2px solid;
+    width: 45%;
+    font-family: Goldman, sans-serif;
+    font-size: 95%;
+}
+article#novedades{
+    border: black 2px solid;
+    width: 45%;
+    margin-top: 0;
+}
+footer{
+    clear: both;
+    border-top: 2px solid black;
+    overflow: hidden;
+    background-color: lightgray;
+    padding: 1%;
+}
+footer article,div{
+    width: 29.5%;
+    float: left;
+    border: black 2px solid;
+    font-family: Goldman, sans-serif;
+}
+footer article ul{
+    font-size: 0.8vw;
+}
+article#margenes{
+    margin-right: 5.25%;
+}
+iframe{
+    margin: 0;
+    margin-top: 1%;
+}
+article#creditos{
+    float: right;
+    margin-right: 1%;
+}
