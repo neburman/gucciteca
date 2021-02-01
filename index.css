@@ -55,7 +55,7 @@ nav#lista{
 }
 ul#Enlaces{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
     padding: 0;
     border-radius: 5%;
