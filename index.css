@@ -229,10 +229,11 @@ article#creditos{
     article#dos{
         display: flex;
         flex-flow: column;
-        justify-content: space-between;
+        justify-content: center;
         width: 100%;
     }
     article#imagenes{
+        margin-right: 1%;
         margin-bottom: 5%;
         display: flex;
         justify-content: center;
@@ -241,21 +242,17 @@ article#creditos{
         width: 100%;
     }
     article#destacados{
+        margin-left: 1%;
         margin-bottom: 5%;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         border: black 2px solid;
         width: 100%;
         text-align: justify;
-        margin-left: 1%;
-        margin-right: 1%;
-    }
-    article#destacados img{
-        border-bottom: 2px solid black;
-        border-right: 2px solid black;;
-        width: 45%;
-        height: 60%;
     }
     h2.destacado{
+        width: 100%;
         font-family: BigShoulders, sans-serif;
         text-align: center;
         font-size: 200%;
@@ -265,7 +262,22 @@ article#creditos{
         margin-inline-start: 0;
         margin: 0;
         border-bottom: 2px solid black;
-        font-size: 2.5vw;
+        font-size: 4.5vw;
+    }
+    article#destacados img{
+        border-bottom: 0px;
+        border-right: 2px solid black;
+        width: 45%;
+        height: 60%;
+    }
+    article#textodestacado{
+        justify-content: center;
+        width: 53%;
+    }
+    p{
+        font-size: 1.75vw;
+        margin-left: 3%;
+        margin-right: 3%;
     }
     article#preguntas{
         margin-bottom: 5%;
