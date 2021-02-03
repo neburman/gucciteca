@@ -204,11 +204,12 @@ p{
         font-size: 10vw;
     }
     /*hay que mirar mucho este apartado*/
+    ul#Enlaces{
+        flex-flow: row wrap;
+    }
     ul#Enlaces li{
-        width: 30%;
-        height: 15%;
-        margin-right: 2%;
-        margin-left: 2%;
+        width: 20%;
+        margin: auto 2% 2% 2%;
         list-style-type: none;
         position: relative;
         border: white 2px solid;
@@ -221,7 +222,7 @@ p{
         display: block;
         text-decoration: none;
         color: white;
-        font-size: 2vw;
+        font-size: 3vw;
         text-align: center;
     }
     article#principal{
