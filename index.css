@@ -166,7 +166,7 @@ article.SepInterna{
 footer{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     clear: both;
     border-top: 2px solid black;
     overflow: hidden;
