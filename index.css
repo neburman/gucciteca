@@ -197,20 +197,19 @@ p{
     font-size: 0.8vw;
 }
 @media screen and (max-width: 480px) {
-    ul#Enlaces{
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-around;
-        padding: 0;
-        border-radius: 5%;
+    body{
+        width: 99%;
+        background-color: cornflowerblue;
     }
+    header h1 a{
+        font-size: 10vw;
+    }
+    /*hay que mirar mucho este apartado*/
     ul#Enlaces li{
         width: 30%;
         height: 15%;
         margin-right: 2%;
         margin-left: 2%;
-        display: flex;
-        flex-flow: column wrap;
         list-style-type: none;
         position: relative;
         border: white 2px solid;
@@ -218,65 +217,54 @@ p{
         background-color: #333333;
         padding: 1% 2.25%;
     }
+    /*hasta aqui*/
+    ul#Enlaces li a{
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 2vw;
+        text-align: center;
+    }
     article#principal{
         width: 95%;
-        border-top: 2px solid black;
-        border-bottom: 2px solid black;
-        padding-left: 1%;
-        padding-right: 1%;
+        border-top: 0px;
+        border-bottom: 0px;
+        padding: 0 1%;
         display: flex;
         flex-flow: column wrap;
     }
     article#uno{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         flex-flow: column wrap;
-        width: 100%;
     }
     article#dos{
-        display: flex;
         flex-flow: column;
         justify-content: center;
         width: 100%;
     }
     article#imagenes{
+        background-color: #fff;
         margin-right: 1%;
         margin-bottom: 5%;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        border: 2px solid black;
         width: 100%;
     }
     article#destacados{
+        background-color: #fff;
         margin-left: 1%;
         margin-bottom: 5%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        border: black 2px solid;
         width: 100%;
-        text-align: justify;
-    }
-    h2.destacado{
-        width: 100%;
-        font-family: BigShoulders, sans-serif;
-        text-align: center;
-        font-size: 200%;
-        background-color: #c72030;
-        color: #c3b14a;
-        margin-block-start: 0;
-        margin-inline-start: 0;
-        margin: 0;
-        border-bottom: 2px solid black;
-        font-size: 4.5vw;
     }
     article#destacados img{
         border-bottom: 0px;
         border-right: 2px solid black;
         width: 45%;
         height: 60%;
+    }
+    h2.destacado{
+        width: 100%;
+        font-size: 4.5vw;
     }
     article#textodestacado{
         justify-content: center;
@@ -288,18 +276,15 @@ p{
         margin-right: 3%;
     }
     article#preguntas{
+        background-color: #fff;
         margin-bottom: 5%;
         justify-content: center;
-        border: black 2px solid;
         width: 100%;
-        font-family: Goldman, sans-serif;
-        font-size: 95%;
     }
     article#novedades{
-        margin-bottom: 5%;
+        background-color: #fff;
+        margin-bottom: 4%;
         justify-content: center;
-        border: black 2px solid;
         width: 100%;
-        margin-top: 0;
     }
 }
