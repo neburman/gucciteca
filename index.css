@@ -121,7 +121,7 @@ article#imagenes{
     width: 60%;
 }
 article#imagenes img{
-    height: 40rem;
+    width: 50%;
 }
 article#destacados{
     border: black 2px solid;
@@ -282,8 +282,25 @@ p{
     }
     article#novedades{
         background-color: #fff;
-        margin-bottom: 4%;
+        margin-bottom: 5%;
         justify-content: center;
         width: 100%;
+    }
+    footer{
+        align-items: center;
+        flex-flow: column wrap;
+    }
+    article#margenes{
+        margin-bottom: 5%;
+        width: 97%;
+    }
+    article#comunicados{
+        margin-bottom: 5%;
+        width: 97%;
+    }
+    article#creditos{
+        margin-bottom: 5%;
+        margin-right: 0;
+        width: 97%;
     }
 }
