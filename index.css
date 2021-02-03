@@ -119,6 +119,7 @@ article#imagenes{
     margin-left: 1%;
     border: 2px solid black;
     width: 60%;
+    height: 60%;
 }
 article#imagenes img{
     width: 50%;
