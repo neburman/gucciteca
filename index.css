@@ -121,8 +121,7 @@ article#imagenes{
     width: 60%;
 }
 article#imagenes img{
-    width: 50%;
-    height: 50%;
+    height: 40rem;
 }
 article#destacados{
     border: black 2px solid;
