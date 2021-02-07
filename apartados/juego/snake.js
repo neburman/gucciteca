@@ -19,6 +19,8 @@ var ctx = canvas.getContext("2d"); //Obtner una variable que crea los graficos d
 var direccion = 0; //Declaramos la direccion como 0 para que asi la serpiente no se mueva hasta que el jugador pulse cualquier tecla
 var puntos = 0; //Declaramos que los puntos son 0
 var largura = 0; // Declaramos que la largura de la serpiente es 0 ya que mas adelante se le dara valor
+var x = 0;
+var i = 0;
 //Inicio de las funciones
 function dificultad_facil(){//Con esta funcion cambiamos la velocidad de actualizacion por tanto la serpiente puede ir o mas rapido o mas lenta
     repeticion_bucle = 100;
@@ -134,7 +136,7 @@ function inicio(){
     ctx.fillStyle = "#000000"; //De que color queremos dibujar
     ctx.fillRect(0, 0, ALTURA_REAL, ANCHURA_REAL); //Aqui determinamos el tamaño del canvas
     ctx.fillStyle = COLOR_SNAKE;
-    for(var i=0; i<LARGURA_INICIAL; i++){//Comenzamos un bucle para crear la serpiente
+    for(i=0; i<LARGURA_INICIAL; i++){//Comenzamos un bucle para crear la serpiente
         snake.push([snake_posicion[0] + i * UNIDADES, snake_posicion[1]]);//Metemos dentro de la variable global snake el punto generado de snake
     }
     largura = snake.length - 1 ;
