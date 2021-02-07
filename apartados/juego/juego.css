@@ -1,0 +1,90 @@
+@font-face{
+    font-family: "BigShoulders";
+    src: url("../../fuentes/BigShouldersStencilText-Medium.ttf");
+}
+@font-face{
+    font-family: "Goldman";
+    src: url("../../fuentes/Goldman-Regular.ttf");
+}
+html{
+    background-color: #2e528b;
+}
+body{
+    width: 80%;
+    margin: 0 auto 0 auto;
+    background-color: whitesmoke;
+    border: black 2px solid;
+}
+header{
+    border-top: black 2px solid;
+    border-bottom: black 2px solid;
+    background-color: #335644;
+    margin-bottom: 1%;
+}
+h1{
+    font-family: BigShoulders, sans-serif;
+    text-align: center;
+    background-color: #c72030;
+    color: #c3b14a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header h1 a{
+    text-decoration: none;
+    color: #c3b14a;
+    font-size: 6vw;
+}
+header h1 a:hover{
+    text-decoration: none;
+    color: black;
+}
+header h1 img{
+    vertical-align: middle;
+    height: 15%;
+    width: 15%;
+    margin-left: 5%;
+}
+article#pantalla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+h2{
+    font-family: Goldman, Arial, Helvetica, sans-serif;
+}
+canvas{
+    margin-bottom: 5%;
+}
+@media screen and (max-width: 480px) {
+    body{
+        width: 99%;
+        background-color: cornflowerblue;
+    }
+    header h1 a{
+        font-size: 10vw;
+    }
+    /*hay que mirar mucho este apartado*/
+    ul#Enlaces{
+        flex-flow: row wrap;
+    }
+    ul#Enlaces li{
+        width: 20%;
+        margin: auto 2% 2% 2%;
+        list-style-type: none;
+        position: relative;
+        border: white 2px solid;
+        border-radius: 5%;
+        background-color: #333333;
+        padding: 1% 2.25%;
+    }
+    /*hasta aqui*/
+    ul#Enlaces li a{
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 3vw;
+        text-align: center;
+    }
+}
