@@ -15,24 +15,25 @@ var fruta = [0, 0];//Creamos una variable global para almacenar la posicion de l
 var snake = [];//Creamos una lista de puntos
 var canvas = document.getElementById("juego"); //Metemos dentro de la variable canvas la ubicacion de canvas //Variable global para no repetir codigo
 var ctx = canvas.getContext("2d"); //Obtner una variable que crea los graficos del canvas //Variable global para no repetir codigo
-var direccion = 0;
-var puntos = 0;
-var largura = 0;
+var direccion = 0; //Declaramos la direccion como 0 para que asi la serpiente no se mueva hasta que el jugador pulse cualquier tecla
+var puntos = 0; //Declaramos que los puntos son 0
+var largura = 0; // Declaramos que la largura de la serpiente es 0 ya que mas adelante se le dara valor
 //Inicio de las funciones
-function posicion_aleatoria(){
+function posicion_aleatoria(){//Creamos la funcion de posicion aleatoria para asi de esta manera generar las cosas de manera aleatoria
     var altura = Math.round(Math.random() * ALTURA) * UNIDADES; //Creamos la posicion aleatoria de la altura pero le metemos la posicion de 0 a 49 y luego lo multiplicamos por 10 para asi obtener la posicion de un cuadrado
     var anchura = Math.round(Math.random() * ANCHURA) * UNIDADES; //Creamos la posicion aleatoria de la anchura pero le metemos la posicion de 0 a 49 y luego lo multiplicamos por 10 para asi obtener la posicion de un cuadrado
-    if(altura >= ALTURA_REAL){
-        altura += UNIDADES;
+    if(altura >= ALTURA_REAL){//Hacemos una comprobacion de que si lo que se genera esta fuera del mapa le reste una unidad(es decir un cuadrado) para que asi se encuentre dentro del mapa
+        altura -= UNIDADES;
     }
-    else if(anchura >= ANCHURA_REAL){
+    else if(anchura >= ANCHURA_REAL){//Aqui comprobamos lo mismo que lo que he mencionado anteriormente
         anchura -= UNIDADES
     }
-    var posicion = [altura, anchura]; //Juntamos esas dos posiciones dentro de un array denominado posicion para acceder a ellas de manera mas comoda
+    var posicion = [altura, anchura]; //Si esta todo bien, juntamos las dos posiciones generadas dentro de un array denominado posicion para acceder a ellas de manera mas comoda
     return(posicion); //Devolvemos el valor obtenido
 }
 
-function direccion_snake(){
+function direccion_snake(){//Aqui creamos la funcion que se encarga del movimiento de la serpiente
+    //Lo que hacemos es asignar a cada cuadrado la posicion de su antecesor. Ejemplo al cuadrado 2 le asignamos la posicion del 1 y al uno le sumanos una unidad
     if(direccion == 1){//Ir hacia arriba
         for(x=largura; x>0; x--){
             snake[x][0] = snake[x-1][0];
@@ -63,23 +64,23 @@ function direccion_snake(){
     }
 }
 
-function añadir_puntos(){
+function añadir_puntos(){//Mediante esta funcion lo que buscamos es que cada vez que el usuario coma una manzana esta se genere de nuevo y sume sus respectivos puntos
     puntos += PUNTOS_POR_FRUTA;
-    document.getElementById("puntos").innerHTML = "Puntos: "+puntos;
-    fruta = posicion_aleatoria();
+    document.getElementById("puntos").innerHTML = "Puntos: "+puntos;//Cambiamos el contenido del p que contiene el texto de puntos
+    fruta = posicion_aleatoria();//Generamos una nueva posicion aleatoria para la manzana
     ctx.fillStyle = COLOR_FRUTA;
-    ctx.fillRect(fruta[0], fruta[1], UNIDADES, UNIDADES); //Aqui dibujamos lo correspondiente a un cuadrado de color rojo
-    snake.push([snake[largura][0] + UNIDADES, snake[largura][1] + UNIDADES]);
-    largura = snake.length - 1;
+    ctx.fillRect(fruta[0], fruta[1], UNIDADES, UNIDADES); //Dibujamos la manzana con sus nuevas coordenadas
+    snake.push([snake[largura][0] + UNIDADES, snake[largura][1] + UNIDADES]);//Le añadimos un cuadrado extra a la serpiente
+    largura = snake.length - 1;//Le metemos a la variable largura la longitud del array -1 ya que el array va desde 0 hasta N en cambio la longitud no empieza en 0 sino que la longitud minima es 1
 }
 
-function reiniciar(){ 
+function reiniciar(){ //Creamos la funcion para reiniciar todos los valores a 0 tanto los puntos como la serpiente a su largura inicial
     puntos = 0;
     document.getElementById("puntos").innerHTML = "Puntos: "+puntos;
     snake = [];
-    var snake_posicion = posicion_aleatoria(); //Llamamos a la funcion posicion aleatoria para que nos devuelva una posicion aleatoria y se la metemos a snake
-    for(var i=0; i<LARGURA_INICIAL; i++){//Comenzamos un bucle para crear la serpiente
-        snake.push([snake_posicion[0] + i * UNIDADES, snake_posicion[1]]);//Metemos dentro de la variable global snake el punto generado de snake
+    var snake_posicion = posicion_aleatoria(); 
+    for(var i=0; i<LARGURA_INICIAL; i++){
+        snake.push([snake_posicion[0] + i * UNIDADES, snake_posicion[1]]);
     }
 }
 
