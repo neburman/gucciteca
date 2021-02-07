@@ -51,11 +51,20 @@ article#pantalla{
     align-items: center;
     flex-flow: column wrap;
 }
-h2{
+h2, button{
     font-family: Goldman, Arial, Helvetica, sans-serif;
 }
+article#botones{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 30%;
+    margin-bottom: 2.5%;
+}
+
 canvas{
-    margin-bottom: 5%;
+    margin-bottom: 1%;
 }
 @media screen and (max-width: 480px) {
     body{
