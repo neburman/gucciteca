@@ -1,3 +1,7 @@
+@font-face{
+    font-family: "BigShoulders";
+    src: url("../../fuentes/BigShouldersStencilText-Medium.ttf");
+}
 html{
     background-color: #2e528b;
 }
@@ -92,6 +96,14 @@ section.respuestas{
 section#perder{
     margin: 3%;
 }
+footer{
+    background-color: gray;
+    font-size: 1vw;
+    border: black 2px solid;
+    padding: 2% 0%;
+    text-align: center;
+    margin-bottom: 2%;
+}
 @media screen and (max-width: 480px) {
     body{
         width: 99%;
@@ -127,5 +139,8 @@ section#perder{
     }
     section.respuestas{
         font-size: 3.5vw;
+    }
+    footer{
+        font-size: 3vw;
     }
 }
