@@ -4,12 +4,12 @@ const ANCHURA = 50;
 const UNIDADES = 10;
 const ALTURA_REAL = ALTURA * UNIDADES;
 const ANCHURA_REAL = ANCHURA * UNIDADES;
-const LARGURA_INICIAL = 4;
-const PUNTOS_POR_FRUTA = 10;
+const LARGURA_INICIAL = 4;//Largura inicial de la serpiente
+const PUNTOS_POR_FRUTA = 10;//Estos son los puntos por cada fruta comida
 //const REPETICION_BUCLE = 100;
 
-const COLOR_FRUTA = "#ff0000";
-const COLOR_SNAKE = "#00ff00";
+const COLOR_FRUTA = "#ff0000";//Determinamos el color de la fruta
+const COLOR_SNAKE = "#00ff00";//Determinamos el color de la serpiente
 
 var repeticion_bucle = 100;//Creamos la variable que es la que se va a encargar de decirnos cada cuanto se va a actualizar el juego 
 var fruta = [0, 0];//Creamos una variable global para almacenar la posicion de la fruta
@@ -22,15 +22,15 @@ var largura = 0; // Declaramos que la largura de la serpiente es 0 ya que mas ad
 var x = 0;
 var i = 0;
 //Inicio de las funciones
-function dificultad_facil(){//Con esta funcion cambiamos la velocidad de actualizacion por tanto la serpiente puede ir o mas rapido o mas lenta
+function dificultad_facil(){//Con esta funcion cambiamos la velocidad de actualizacion es decir, que la serpiente se mueve una unidad cada 100ms
     repeticion_bucle = 100;
 }
 
-function dificultad_media(){//Con esta funcion cambiamos la velocidad de actualizacion por tanto la serpiente puede ir o mas rapido o mas lenta
+function dificultad_media(){//Con esta funcion cambiamos la velocidad de actualizacion es decir, que la serpiente se mueve una unidad cada 50ms
     repeticion_bucle = 50;
 }
 
-function dificultad_dificil(){//Con esta funcion cambiamos la velocidad de actualizacion por tanto la serpiente puede ir o mas rapido o mas lenta
+function dificultad_dificil(){//Con esta funcion cambiamos la velocidad de actualizacion es decir, que la serpiente se mueve una unidad cada 25ms
     repeticion_bucle = 25;
 }
 
@@ -92,7 +92,6 @@ function añadir_puntos(){//Mediante esta funcion lo que buscamos es que cada ve
 function reiniciar(){ //Creamos la funcion para reiniciar todos los valores a 0 tanto los puntos como la serpiente a su largura inicial
     puntos = 0;
     document.getElementById("puntos").innerHTML = "Puntos: "+puntos;
-    snake = [];
     snake_posicion = posicion_aleatoria(); 
     for(i=0; i<LARGURA_INICIAL; i++){
         snake.push([snake_posicion[0] + i * UNIDADES, snake_posicion[1]]);
@@ -115,15 +114,19 @@ function juego(){
     if(snake[0][0] == fruta[0] && snake[0][1] == fruta[1]){// Con esta condicional detectamos si la cabeza de la serpiente esta sobre la manzana
         añadir_puntos();
     }
+    for(i = largura; i>=1; i--){
+        if(snake[0][0] == snake[i][0] && snake[0][1] == snake[i][1]){//Con esta condicional detectamos si la cabeza de la serpiente se choca contra alguna parte de su cuerpo
+            direccion = 0;
+            snake = []; 
+            if(confirm("Te has comido a ti mismo,\n¿Deseas reiniciar el juego?") == true){
+                reiniciar();
+            } 
+        }
+    }
     if(snake[0][0] >= ANCHURA_REAL || snake[0][1] >= ALTURA_REAL || snake[0][0] < 0 || snake[0][1] < 0){//Con esta condicional detectamos si la cabeza de la serpiente esta chocando contra alguna pared
         direccion = 0;
-        alert("Te has estampado contra una parez, \nCierra la alerta para que el juego se reinicie"); 
-        reiniciar();
-    }
-    for(i = largura; i>0; i--){
-        if(snake[0][0] == snake[i][0] && snake[0][1] == snake[i][1]){//Con esta condicional detectamos si la cabeza de la serpiente esta sobre la manzana
-            direccion = 0;
-            alert("Te has comido a ti mismo,\nCierra la alerta para que el juego se reinicie"); 
+        snake = []; 
+        if(confirm("Te has estampado contra una pared, \n¿Deseas reiniciar el juego?") == true){
             reiniciar();
         }
     }

@@ -1,0 +1,131 @@
+@font-face{
+    font-family: "BigShoulders";
+    src: url("../../fuentes/BigShouldersStencilText-Medium.ttf");
+}
+@font-face{
+    font-family: "Goldman";
+    src: url("../../fuentes/Goldman-Regular.ttf");
+}
+html{
+    background-color: #2e528b;
+}
+body{
+    background-color: #2e528b;
+    width: 80%;
+    margin: 0 auto 0 auto;
+}
+header{
+    border: black 2px solid;
+    background-color: #335644;
+    margin: 0.5% 0;
+}
+img.cabecera{
+    
+}
+h1{
+    font-size: 4vw;
+    margin: 0;
+    padding: 1% 0;
+    text-align: center;
+}
+nav#lista{
+    border: black 2px solid;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    background-color: #335644;
+    margin-bottom: 1%;
+}
+ul#Enlaces{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 0;
+    border-radius: 5%;
+}
+ul#Enlaces li{
+    display: flex;
+    list-style-type: none;
+    position: relative;
+    border: white 2px solid;
+    border-radius: 5%;
+    background-color: #333333;
+    padding: 1% 2.25%;
+    flex-flow: column wrap;
+}
+ul#Enlaces li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.25vw;
+    text-align: center;
+}
+ul#Enlaces li ul{
+    display: none;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    margin: 5%;
+    padding: 0;
+}
+ul#Enlaces li:hover ul{
+    display: block;
+}
+ul#Enlaces li ul li{
+    display: flex;
+    position: relative;
+    margin-top: 0.5rem;
+}
+h2{
+    text-align: center;
+}
+article#descripciones{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-shadow: black 10px 10px;
+    border: black 2px solid;
+    background-color: rgb(196, 189, 189);
+    background-image: url(imagenes/fondoconlibros.PNG);
+    background-size: cover;
+    margin-bottom: 5%;
+}
+article.resumenes{
+    border: black 2px solid;
+    width: 50%;
+    height: 50%;
+    font-size: 1.5vw;
+    margin: 3% 0%;
+    background-color: #fff;
+    background-image: url(imagenes/fondoletras.jpg);
+    
+    
+}
+article.descripcion{
+    padding: 1.5%;
+    text-align: center;
+}
+@media screen and (max-width: 480px) {
+    body{
+        width: 90%;
+        margin: 5%;
+    }
+    header{
+        margin: 2% 0 4% 0;
+    }
+    h1{
+        font-size: 9vw;
+        margin: 0 0 1% 0;
+    }
+    article#descripciones{
+        flex-direction: column;
+        align-items: center;
+        margin: 4% 0;
+        background-size: contain;
+    }
+    article.resumenes{
+        width: 70%;
+        height: 90%;
+        font-size: 4vw;
+    }
+}

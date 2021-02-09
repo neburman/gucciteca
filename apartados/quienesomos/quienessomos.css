@@ -126,12 +126,31 @@ img.perfil{
     width: 10vw;
     height: 10vw;
 }
+footer{
+    background-color: gray;
+    font-size: 1vw;
+    border: black 2px solid;
+    padding: 2% 0%;
+}
 @media screen and (max-width: 480px) {
     body{
         font-size: 3vw;
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;
+    }
+    ul#Enlaces{
+        flex-flow: row wrap;
+    }
+    ul#Enlaces li{
+        width: 20%;
+        margin: auto 2% 2% 2%;
+        list-style-type: none;
+        position: relative;
+        border: white 2px solid;
+        border-radius: 5%;
+        background-color: #333333;
+        padding: 1% 2.25%;
     }
     h1{
         font-size: 8vw;
@@ -152,5 +171,16 @@ img.perfil{
     img.perfil{
         width: 20vw;
         height: 20vw;
+    }
+    article#imagenes{
+        flex-direction: column;
+        padding: 5% 0%;
+    }
+    article#imagenes img{
+        width: 80%;
+        margin: 3% 10%;
+    }
+    footer{
+        font-size: 3vw;
     }
 }

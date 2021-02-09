@@ -93,26 +93,26 @@ ul#Enlaces li ul li{
     position: relative;
     margin-top: 0.5rem;
 }
-article#principal{
+section#principal{
     width: 100%;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     padding: 1% 0;
 }
-article#uno{
+section#uno{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
 }
-article#dos{
+section#dos{
     display: flex;
     justify-content: space-between;
     width: 60.25%;
     margin: 1% 0 1% 1%;
 }
-article#imagenes{
+section#imagenes{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -121,7 +121,7 @@ article#imagenes{
     width: 60%;
     height: 60%;
 }
-article#imagenes img{
+section#imagenes img{
     width: 50%;
 }
 article#destacados{
@@ -141,8 +141,6 @@ h2.destacado{
     font-size: 200%;
     background-color: #c72030;
     color: #c3b14a;
-    margin-block-start: 0;
-    margin-inline-start: 0;
     margin: 0;
     border-bottom: 2px solid black;
     font-size: 2.5vw;
@@ -160,7 +158,7 @@ article#novedades{
     width: 45%;
     margin-top: 0;
 }
-article.SepInterna{
+section.SepInterna{
     padding: 2%;
 }
 footer{
@@ -173,7 +171,7 @@ footer{
     background-color: lightgray;
     padding: 1%;
 }
-footer article,div{
+footer article{
     width: 29.5%;
     border: black 2px solid;
     font-family: Goldman, sans-serif;
@@ -204,7 +202,6 @@ p{
     header h1 a{
         font-size: 10vw;
     }
-    /*hay que mirar mucho este apartado*/
     ul#Enlaces{
         flex-flow: row wrap;
     }
@@ -218,7 +215,6 @@ p{
         background-color: #333333;
         padding: 1% 2.25%;
     }
-    /*hasta aqui*/
     ul#Enlaces li a{
         display: block;
         text-decoration: none;
@@ -296,7 +292,7 @@ p{
         margin-bottom: 5%;
         width: 97%;
     }
-    article#comunicados{
+    article#validaciones{
         margin-bottom: 5%;
         width: 97%;
     }
