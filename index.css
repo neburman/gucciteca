@@ -222,7 +222,7 @@ p{
         font-size: 3vw;
         text-align: center;
     }
-    article#principal{
+    section#principal{
         width: 95%;
         border-top: 0px;
         border-bottom: 0px;
@@ -230,15 +230,15 @@ p{
         display: flex;
         flex-flow: column wrap;
     }
-    article#uno{
+    section#uno{
         flex-flow: column wrap;
     }
-    article#dos{
+    section#dos{
         flex-flow: column;
         justify-content: center;
         width: 100%;
     }
-    article#imagenes{
+    section#imagenes{
         background-color: #fff;
         margin-right: 1%;
         margin-bottom: 5%;
@@ -262,10 +262,6 @@ p{
     h2.destacado{
         width: 100%;
         font-size: 4.5vw;
-    }
-    article#textodestacado{
-        justify-content: center;
-        width: 53%;
     }
     p{
         font-size: 1.75vw;
@@ -292,7 +288,7 @@ p{
         margin-bottom: 5%;
         width: 97%;
     }
-    article#validaciones{
+    article#validacion{
         margin-bottom: 5%;
         width: 97%;
     }
