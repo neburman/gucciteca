@@ -1,7 +1,3 @@
-@font-face{
-    font-family: "BigShoulders";
-    src: url("../../fuentes/BigShouldersStencilText-Medium.ttf");
-}
 html{
     background-color: #2e528b;
 }
@@ -14,19 +10,12 @@ header{
     border: black 2px solid;
     background-color: #335644;
     margin: 0.5% 0;
-    padding: 2% 0;
 }
 h1{
     font-size: 4vw;
     margin: 0;
     padding: 1% 0;
     text-align: center;
-    background-color: #c72030;
-    color: #c3b14a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: BigShoulders, Arial, Helvetica, sans-serif;
 }
 nav#lista{
     border: black 2px solid;
@@ -75,48 +64,39 @@ ul#Enlaces li ul li{
     position: relative;
     margin-top: 0.5rem;
 }
-article#libros{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    box-shadow: black 10px 10px;
+section#principal{
     border: black 2px solid;
-    background-color: rgb(196, 189, 189);
-    background-image: url(imagenes/fondoconlibros.PNG);
-    background-size: cover;
-    margin-bottom: 5%;
-}
-article.ejemplares{
-    border: black 2px solid;
-    width: 20%;
-    height: 30%;
-    font-size: 1.5vw;
-    margin: 3% 5%;
+    width: 90%;
+    margin: 2%;
+    padding: 3%;
     background-color: #fff;
-    background-image: url(imagenes/fondoletras.jpg);
 }
-img.portada{
-    width: 100%;
-    height: 100%;
+h2{
+    text-align: center;
     border-bottom: black 2px solid;
 }
-section.titulo{
-    padding: 1.5%;
-    text-align: center;
+section.respuestas{
+    width: 90%;
+    margin: 0% 5% 2% 5%;
+    font-size: 1.2vw;
+    text-align: justify;
+    margin-bottom: 5%;
 }
-footer{
-    background-color: gray;
-    font-size: 1vw;
-    border: black 2px solid;
-    padding: 2% 0%;
-    text-align: center;
-    margin-bottom: 2%;
+section#perder{
+    margin: 3%;
 }
 @media screen and (max-width: 480px) {
     body{
-        width: 90%;
-        margin: 5%;
+        width: 99%;
+    }
+    header{
+        margin: 3% 2%;
+    }
+    h1{
+        font-size: 9vw;
+    }
+    nav#lista{
+        margin: 0 2% 2%;
     }
     ul#Enlaces{
         flex-flow: row wrap;
@@ -138,25 +118,7 @@ footer{
         font-size: 3vw;
         text-align: center;
     }
-    header{
-        margin: 2% 0 4% 0;
-    }
-    h1{
-        font-size: 9vw;
-        margin: 0 0 1% 0;
-    }
-    article#libros{
-        flex-direction: column;
-        align-items: center;
-        margin: 4% 0;
-        background-size: contain;
-    }
-    article.ejemplares{
-        width: 70%;
-        height: 90%;
-        font-size: 4vw;
-    }
-    footer{
-        font-size: 3vw;
+    section.respuestas{
+        font-size: 3.5vw;
     }
 }

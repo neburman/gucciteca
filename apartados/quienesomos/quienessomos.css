@@ -1,3 +1,7 @@
+@font-face{
+    font-family: "BigShoulders";
+    src: url("../../fuentes/BigShouldersStencilText-Medium.ttf");
+}
 html{
     background-color: #2e528b;
 }
@@ -10,7 +14,22 @@ body{
     margin-right: 10%;
 }
 header{
-    background-color:  #335644;
+    border: black 2px solid;
+    background-color: #335644;
+    margin: 0.5% 0;
+    padding: 2% 0;
+}
+h1{
+    font-size: 4vw;
+    margin: 0;
+    padding: 1% 0;
+    text-align: center;
+    background-color: #c72030;
+    color: #c3b14a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: BigShoulders, Arial, Helvetica, sans-serif;
 }
 nav#lista{
     border: black 2px solid;
@@ -58,12 +77,6 @@ ul#Enlaces li ul li{
     display: flex;
     position: relative;
     margin-top: 0.5rem;
-}
-h1{
-    font-size: 4vw;
-    margin: 0 0 1% 0;
-    padding: 1%;
-    border: black 2px solid;
 }
 h2{
     font-size: 2.5vw;
@@ -151,6 +164,13 @@ footer{
         border-radius: 5%;
         background-color: #333333;
         padding: 1% 2.25%;
+    }
+    ul#Enlaces li a{
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 3vw;
+        text-align: center;
     }
     h1{
         font-size: 8vw;
