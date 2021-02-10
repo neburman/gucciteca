@@ -194,6 +194,108 @@ p{
     text-align: justify;
     font-size: 0.8vw;
 }
+p#usuario{
+    position: relative;
+    background-color: #888;
+    font-size: 1vw;
+    width: max-content;
+}
+.emergente {
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    padding-top: 10%; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+  
+.contenidoemergente {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%;
+}
+
+.cerrar {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.cerrar:hover,.cerrar:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+form{
+    background-color: white;
+    border-radius: 0 0 3px 3px;
+    color: black;
+    font-size: 0.8em;
+    padding: 20px;
+    margin: 0 auto;
+    width: 300px;
+}
+.campos{
+    border: solid 1px red;
+    padding: 10px;
+    width: 240px;
+    border-radius: 0 5px 5px 0;
+}
+.campos-contenedor div{
+    display: inline-block;
+    vertical-align: top;
+}
+.campos-contenedor i{
+    border: solid 1px red;
+    background-color: lightgray;
+    padding: 11.5px 10px 11.5px 10px;
+    margin-right: -5px;
+    border-radius: 5px 0 0 5px;
+}
+.columnas >div{
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    margin-right: -4px;
+}
+.columnas .campos{
+    width: 80px;
+}
+#menu, #formulario{
+    margin: 0 auto;
+    width: 340px;
+}
+
+#menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li{
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px;
+}
+
+#menu ul li a{
+    background-color: #ddd;
+    color: #222;
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+#menu ul li a:hover{
+    background-color: #eee;
+}
 @media screen and (max-width: 480px) {
     body{
         width: 99%;

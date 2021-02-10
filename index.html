@@ -6,11 +6,13 @@
     <title>GUCCITECA</title>
     <meta name="author" content="Arkaitz Arias, Ruben Moreno, Imanol Nanclares, Iker Sañudo">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="fuentes/css/css/all.css">
     <link rel="icon" href="imagenes/favicon.png" type="image/png" />
-    <script src="botones.js"></script>
 </head>
 <body>
     <header>
+        <button id="login_registro" style="right: 10%; position: absolute;">Login / Registro</button>
+        <!--<p id="usuario"></p>-->
         <h1>
             <a href="https://neburman.github.io/gucciteca/">GUCCITECA</a>
             <img src="imagenes/logotipo.jpg" alt="Logo-empresa">
@@ -67,11 +69,21 @@
                 <h2 class="destacado">LIBRO DESTACADO</h2>
                 <img src="imagenes/imagen4.jpg" alt="Libro-Destacado">
                 <section class="SepInterna">
-                    <p>Debido a la gran demanda por parte de las personas que regentan nuestra biblioteca y debido a su reciente publicación hemos decidido pedir 5 libros de Don Quijote de la Mancha (Edición conmemorativa de la RAE y la ASALE).</p>
-                    <p>¿Porque es una edición conmemorativa?</p>
-                    <p>Es una edición conmemorativa porque la RAE ha lanzado esta versión del Quijote para así, de esta manera, conmemorar el 400 aniversario del autor.</p>
-                    <p>¿Que tiene de especial?</p>
-                    <p>Que se ha escrito en el español que se utiliza hoy en día, para asi, mejorar facilitar su lectura.</p>
+                    <p>
+                        Debido a la gran demanda por parte de las personas que regentan nuestra biblioteca y debido a su reciente publicación hemos decidido pedir 5 libros de Don Quijote de la Mancha (Edición conmemorativa de la RAE y la ASALE).
+                    </p>
+                    <p>
+                        ¿Porque es una edición conmemorativa?
+                    </p>
+                    <p>
+                        Es una edición conmemorativa porque la RAE ha lanzado esta versión del Quijote para así, de esta manera, conmemorar el 400 aniversario del autor.
+                    </p>
+                    <p>
+                        ¿Que tiene de especial?
+                    </p>
+                    <p>
+                        Que se ha escrito en el español que se utiliza hoy en día, para asi, mejorar facilitar su lectura.
+                    </p>
                 </section>
             </article>
         </section>
@@ -146,6 +158,79 @@
             <p><a href="apartados/quienesomos/quienessomos.html">Obtener mas información acerca de nosotros</a></p>
         </article>
     </footer>
+    <div id="miemergente" class="emergente">
+        <div class="contenidoemergente">
+            <span class="cerrar">&times;</span>
+            <div id="menu">
+                <ul>
+                    <li><a href="#" onclick="iniciar_sesion()">Iniciar sesión</a></li>
+                    <li><a href="#" onclick="registro()">Registrarse</a></li>
+                </ul>
+            </div>
+            <div id="formulario">
+                <form id="inicio_sesion" action="post">
+                    <p>Nombre de usuario:</p>
+                    <div class="campos-contenedor">
+                        <i class="fas fa-user"></i>
+                        <input type="text" class="campos" name="Usuario" required>
+                    </div>
+                    <p>Contraseña:</p>
+                    <div class="campos-contenedor">
+                        <i class="fas fa-key"></i>
+                        <input type="password" class="campos" name="Contraseña" required>
+                    </div>
+                    <p class="centro">
+                        <input type="submit" class="btn btn-green" value="Iniciar sesión">
+                    </p>
+                </form>
+                <form id="registro" action="post" onsubmit="registrarUsuario()">
+                       <div class="columnas">
+                           <div class="campos-contenedor">
+                               <p>Nombre:</p>
+                               <i class="fas fa-user-tag"></i>
+                               <input type="text" class="campos" name="Nombre" required>
+                           </div>
+                           <div class="campos-contenedor">
+                               <p>Apellidos:</p>
+                               <i class="fas fa-user-tag"></i>
+                               <input type="text" class="campos" name="Apellidos" required>
+                           </div>
+                       </div>
+                       <p>Usuario:</p>
+                       <div class="campos-contenedor">
+                           <i class="fas fa-user"></i>
+                           <input id="usuarioRegistro" type="text" class="campos" name="Usuario" required>
+                       </div>
+                       <p>Correo electronico:</p>
+                       <div class="campos-contenedor">
+                           <i class="fas fa-envelope"></i>
+                           <input id="correoRegistro" type="email" class="campos" name="Correo electronico" required>
+                       </div>
+                       <p>Repetir correo electronico:</p>
+                       <div class="campos-contenedor">
+                           <i class="fas fa-envelope"></i>
+                           <input type="email" class="campos" name="ReCorreo electronico" required>
+                       </div>
+                       <p>Contraseña:</p>
+                       <div class="campos-contenedor">
+                           <i class="fas fa-key"></i>
+                           <input id="contrasenaRegistro" type="password" class="campos" name="Contraseña" required>
+                       </div>
+                       <p>Repetir contraseña:</p>
+                       <div class="campos-contenedor">
+                           <i class="fas fa-key"></i>
+                           <input type="password" class="campos" name="ReContraseña" required>
+                       </div>
+                       <p class="centro">
+                           <input type="submit" class="btn btn-green" value="Registrarse">
+                       </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="botones.js"></script>
     <script>imagenes()</script>
+    <script>iniciar_sesion(); bienvenidaDeCache();</script>
+    
 </body>
 </html>

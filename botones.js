@@ -14,3 +14,57 @@ function imagenes(){
             }
     setTimeout(imagenes,2500);
 }
+
+var emergente = document.getElementById("miemergente");
+var boton = document.getElementById("boton");
+var cerrar = document.getElementsByClassName("cerrar")[0];
+
+boton.onclick = function() {
+  emergente.style.display = "block";
+}
+
+cerrar.onclick = function() {
+  emergente.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == emergente) {
+    emergente.style.display = "none";
+  }
+}
+
+function registro(){
+    var intro=document.getElementById("registro");
+    intro.style.display="block";
+    var intro=document.getElementById("inicio_sesion");
+    intro.style.display="none";
+}
+
+function iniciar_sesion(){
+    var intro=document.getElementById("inicio_sesion");
+    intro.style.display="block";
+    var intro=document.getElementById("registro");
+    intro.style.display="none";
+    
+}
+
+function registrarUsuario(){
+    let usuario = {
+        nombre: document.getElementById("usuarioRegistro").value,
+        correo: document.getElementById("correoRegistro").value,
+        contraseña: document.getElementById("contrasenaRegistro").value
+    };
+    localStorage.setItem('DatosUsuario',JSON.stringify(usuario)); 
+    bienvenida(usuario.nombre, usuario.correo);
+
+}
+function bienvenida(nombre, correo){
+    document.getElementById("usuario").innerHTML = `Bienvenido ${nombre} este es tu correo ${correo}`;
+}
+function bienvenidaDeCache(){
+    let kike = localStorage.getItem("DatosUsuario");
+    if(kike){
+        let usuario = JSON.parse(kike);
+        bienvenida(usuario.nombre, usuario.correo);
+    }
+}

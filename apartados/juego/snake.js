@@ -8,8 +8,10 @@ const LARGURA_INICIAL = 4;//Largura inicial de la serpiente
 const PUNTOS_POR_FRUTA = 10;//Estos son los puntos por cada fruta comida
 //const REPETICION_BUCLE = 100;
 
-const COLOR_FRUTA = "#ff0000";//Determinamos el color de la fruta
-const COLOR_SNAKE = "#00ff00";//Determinamos el color de la serpiente
+var color_fruta = "";
+var color_snake = "";
+var color_fondo = "";
+var color_cabeza_serpiente = "";
 
 var repeticion_bucle = 100;//Creamos la variable que es la que se va a encargar de decirnos cada cuanto se va a actualizar el juego 
 var fruta = [0, 0];//Creamos una variable global para almacenar la posicion de la fruta
@@ -32,6 +34,14 @@ function dificultad_media(){//Con esta funcion cambiamos la velocidad de actuali
 
 function dificultad_dificil(){//Con esta funcion cambiamos la velocidad de actualizacion es decir, que la serpiente se mueve una unidad cada 25ms
     repeticion_bucle = 25;
+}
+
+function cambiar_color(){
+    color_fruta = document.getElementById("colormanzana").value;//Determinamos el color de la fruta
+    color_snake = document.getElementById("colorserpiente").value;//Determinamos el color de la serpiente
+    color_fondo = document.getElementById("colorfondo").value;//Determinamos el color del fondo
+    color_cabeza_serpiente = document.getElementById("colorcabezaserpiente").value;//Determinamos el color de la cabeza de la serpiente
+    setTimeout(cambiar_color,0);
 }
 
 function posicion_aleatoria(){//Creamos la funcion de posicion aleatoria para asi de esta manera generar las cosas de manera aleatoria
@@ -83,7 +93,7 @@ function añadir_puntos(){//Mediante esta funcion lo que buscamos es que cada ve
     puntos += PUNTOS_POR_FRUTA;
     document.getElementById("puntos").innerHTML = "Puntos: "+puntos;//Cambiamos el contenido del p que contiene el texto de puntos
     fruta = posicion_aleatoria();//Generamos una nueva posicion aleatoria para la manzana
-    ctx.fillStyle = COLOR_FRUTA;
+    ctx.fillStyle = color_fruta;
     ctx.fillRect(fruta[0], fruta[1], UNIDADES, UNIDADES); //Dibujamos la manzana con sus nuevas coordenadas
     snake.push([snake[largura][0] + UNIDADES, snake[largura][1] + UNIDADES]);//Le añadimos un cuadrado extra a la serpiente
     largura = snake.length - 1;//Le metemos a la variable largura la longitud del array -1 ya que el array va desde 0 hasta N en cambio la longitud no empieza en 0 sino que la longitud minima es 1
@@ -96,18 +106,19 @@ function reiniciar(){ //Creamos la funcion para reiniciar todos los valores a 0 
     for(i=0; i<LARGURA_INICIAL; i++){
         snake.push([snake_posicion[0] + i * UNIDADES, snake_posicion[1]]);
     }
+    largura = snake.length -1;//reiniciamos la largura para que no de errores la generacion
 }
 
 function juego(){
     var ctx= canvas.getContext("2d"); //Obtner una variable que crea los graficos del canvas
-    ctx.fillStyle = "#000000"; //De que color queremos dibujar
+    ctx.fillStyle = color_fondo; //De que color queremos dibujar
     ctx.fillRect(0, 0, ALTURA_REAL, ANCHURA_REAL); //Aqui determinamos el tamaño del canvas
-    ctx.fillStyle = COLOR_FRUTA; //Determinamos nuevamente el color con el que queremos dibujar, en este caso el color rojo
+    ctx.fillStyle = color_fruta; //Determinamos nuevamente el color con el que queremos dibujar, en este caso el color rojo
     ctx.fillRect(fruta[0], fruta[1], UNIDADES, UNIDADES); //Aqui dibujamos lo correspondiente a un cuadrado de color rojo
     direccion_snake();
-    ctx.fillStyle = "#ff00f7";
+    ctx.fillStyle = color_cabeza_serpiente;
     ctx.fillRect(snake[0][0], snake[0][1], UNIDADES, UNIDADES);//Pintamos la cabeza de la serpiente
-    ctx.fillStyle = COLOR_SNAKE; //Determinamos nuevamente el color con el que queremos dibujar, en este caso el color verde
+    ctx.fillStyle = color_snake; //Determinamos nuevamente el color con el que queremos dibujar, en este caso el color verde
     for(i=1; i<largura+1; i++){//Comenzamos un bucle para crear la serpiente en funcion de la largura que tenga
         ctx.fillRect(snake[i][0], snake[i][1], UNIDADES, UNIDADES);//Pintamos los diferentes cuadrados que componen la serpiente
     }
@@ -136,9 +147,9 @@ function juego(){
 function inicio(){
     fruta = posicion_aleatoria(); //Llamamos a la funcion posicion aleatoria para que nos devuelva una posicion aleatoria y se la metemos a fruta
     var snake_posicion = posicion_aleatoria(); //Llamamos a la funcion posicion aleatoria para que nos devuelva una posicion aleatoria y se la metemos a snake
-    ctx.fillStyle = "#000000"; //De que color queremos dibujar
+    ctx.fillStyle = color_fondo; //De que color queremos dibujar
     ctx.fillRect(0, 0, ALTURA_REAL, ANCHURA_REAL); //Aqui determinamos el tamaño del canvas
-    ctx.fillStyle = COLOR_SNAKE;
+    ctx.fillStyle = color_snake;
     for(i=0; i<LARGURA_INICIAL; i++){//Comenzamos un bucle para crear la serpiente
         snake.push([snake_posicion[0] + i * UNIDADES, snake_posicion[1]]);//Metemos dentro de la variable global snake el punto generado de snake
     }
@@ -146,25 +157,33 @@ function inicio(){
     document.addEventListener('keydown', function(evento) {//Las direcciones son las siguientes como las agujas del reloj: Arriba=1, Derecha=2, Abajo=3, Izquierda=4
         if(evento.key == "ArrowUp") {
             if(direccion != 3){//Si la direccion que esta cursando la serpiente no es ir hacia abajo cambiamos de direccion 
-                direccion = 1;
+                if(snake[0][1]%10==0 && snake[0][1]%10==0){
+                    direccion = 1;
+                }
             }
         }
         else if(evento.key == "ArrowDown") {
-            if(direccion != 1){//Si la direccion que esta cursando la serpiente no es ir hacia arriba cambiamos de direccion 
-                direccion = 3;
+            if(direccion != 1){//Si la direccion que esta cursando la serpiente no es ir hacia arriba cambiamos de direccion
+                if(snake[0][1]%10==0 && snake[0][1]%10==0){
+                    direccion = 3;
+                } 
             }
         }
         else if(evento.key == "ArrowLeft") {
-            if(direccion != 2){//Si la direccion que esta cursando la serpiente no es ir hacia la derecha cambiamos de direccion 
-                direccion =  4;
+            if(direccion != 2){//Si la direccion que esta cursando la serpiente no es ir hacia la derecha cambiamos de direccion
+                if(snake[0][1]%10==0 && snake[0][1]%10==0){
+                    direccion =  4;
+                } 
             }
         }
         else if(evento.key == "ArrowRight") {
-            if(direccion != 4 && direccion != 0){//Si la direccion que esta cursando la serpiente no es ir hacia izquierda cambiamos de direccion 
-                direccion = 2;
+            if(direccion != 4 && direccion != 0){//Si la direccion que esta cursando la serpiente no es ir hacia izquierda cambiamos de direccion
+                if(snake[0][1]%10==0 && snake[0][1]%10==0){
+                    direccion = 2;
+                } 
             }
         }
     });
-
     juego(); //Llamamos a la funcion juego
+    cambiar_color();//LLamamos a la funcion cambiar color
 }
