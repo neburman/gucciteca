@@ -1,4 +1,5 @@
 var cont=0;
+var imgs = document.getElementById("img");
 function imagenes(){
     if(cont==0){
         document.getElementById("img").src="imagenes/imagen1.jpg";
@@ -12,11 +13,13 @@ function imagenes(){
                 document.getElementById("img").src="imagenes/imagen3.jpg";
                 cont=0;
             }
-    setTimeout(imagenes,2500);
+    imgs.style.animationName = "none";
+    imgs.style.animationName = "carrusel";
+    setTimeout(imagenes, 5000);
 }
 
 var emergente = document.getElementById("miemergente");
-var boton = document.getElementById("boton");
+var boton = document.getElementById("login_registro");
 var cerrar = document.getElementsByClassName("cerrar")[0];
 
 boton.onclick = function() {

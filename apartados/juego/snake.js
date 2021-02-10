@@ -157,30 +157,22 @@ function inicio(){
     document.addEventListener('keydown', function(evento) {//Las direcciones son las siguientes como las agujas del reloj: Arriba=1, Derecha=2, Abajo=3, Izquierda=4
         if(evento.key == "ArrowUp") {
             if(direccion != 3){//Si la direccion que esta cursando la serpiente no es ir hacia abajo cambiamos de direccion 
-                if(snake[0][1]%10==0 && snake[0][1]%10==0){
-                    direccion = 1;
-                }
+                 direccion = 1;
             }
         }
         else if(evento.key == "ArrowDown") {
             if(direccion != 1){//Si la direccion que esta cursando la serpiente no es ir hacia arriba cambiamos de direccion
-                if(snake[0][1]%10==0 && snake[0][1]%10==0){
-                    direccion = 3;
-                } 
+                direccion = 3;
             }
         }
         else if(evento.key == "ArrowLeft") {
             if(direccion != 2){//Si la direccion que esta cursando la serpiente no es ir hacia la derecha cambiamos de direccion
-                if(snake[0][1]%10==0 && snake[0][1]%10==0){
-                    direccion =  4;
-                } 
+                direccion =  4;
             }
         }
         else if(evento.key == "ArrowRight") {
             if(direccion != 4 && direccion != 0){//Si la direccion que esta cursando la serpiente no es ir hacia izquierda cambiamos de direccion
-                if(snake[0][1]%10==0 && snake[0][1]%10==0){
-                    direccion = 2;
-                } 
+                direccion = 2;
             }
         }
     });
