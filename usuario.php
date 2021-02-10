@@ -2,7 +2,7 @@
     //conectamos con el servidor
     $db='id16128363_gucciteca';
     $user='id16128363_neburman';
-    $server='localhost';
+    $server='database.000webhost.com';
     $pass='SomorrostroDam1#' ;
     
     $conecta=mysqli_connect($server,$user,$pass,$db);
