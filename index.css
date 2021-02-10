@@ -45,6 +45,17 @@ header h1 img{
     width: 15%;
     margin-left: 5%;
 }
+button#login_registro{
+    position: absolute;
+    right: 10%;
+    padding-bottom: 0.20%;
+    border-radius: 0 0 30% 30%;
+    font-size: 1vw;
+}
+button#login_registro:hover{
+    background-color: #aaaaaa;
+    opacity: 90%;
+}
 nav#lista{
     border-top: black 2px solid;
     border-bottom: black 2px solid;
@@ -330,6 +341,11 @@ form{
     }
     header h1 a{
         font-size: 10vw;
+    }
+    button#login_registro{
+        padding: 1%;
+        right: 0%;
+        font-size: 3vw;
     }
     ul#Enlaces{
         flex-flow: row wrap;
