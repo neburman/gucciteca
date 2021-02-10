@@ -97,6 +97,7 @@ function añadir_puntos(){//Mediante esta funcion lo que buscamos es que cada ve
     ctx.fillRect(fruta[0], fruta[1], UNIDADES, UNIDADES); //Dibujamos la manzana con sus nuevas coordenadas
     snake.push([snake[largura][0] + UNIDADES, snake[largura][1] + UNIDADES]);//Le añadimos un cuadrado extra a la serpiente
     largura = snake.length - 1;//Le metemos a la variable largura la longitud del array -1 ya que el array va desde 0 hasta N en cambio la longitud no empieza en 0 sino que la longitud minima es 1
+    document.getElementById("manzana").play();
 }
 
 function reiniciar(){ //Creamos la funcion para reiniciar todos los valores a 0 tanto los puntos como la serpiente a su largura inicial
@@ -128,7 +129,9 @@ function juego(){
     for(i = largura; i>=1; i--){
         if(snake[0][0] == snake[i][0] && snake[0][1] == snake[i][1]){//Con esta condicional detectamos si la cabeza de la serpiente se choca contra alguna parte de su cuerpo
             direccion = 0;
-            snake = []; 
+            snake = [];
+            document.getElementById("melodia").pause();
+            document.getElementById("comerte").play(); 
             if(confirm("Te has comido a ti mismo,\n¿Deseas reiniciar el juego?") == true){
                 reiniciar();
             } 
@@ -136,10 +139,15 @@ function juego(){
     }
     if(snake[0][0] >= ANCHURA_REAL || snake[0][1] >= ALTURA_REAL || snake[0][0] < 0 || snake[0][1] < 0){//Con esta condicional detectamos si la cabeza de la serpiente esta chocando contra alguna pared
         direccion = 0;
-        snake = []; 
+        snake = [];
+        document.getElementById("melodia").pause();
+        document.getElementById("estamparse").play(); 
         if(confirm("Te has estampado contra una pared, \n¿Deseas reiniciar el juego?") == true){
             reiniciar();
         }
+    }
+    if(direccion != 0){
+        document.getElementById("melodia").play();
     }
     setTimeout(juego, repeticion_bucle); //El bucle se va a repetir los milisegundos correspondientes que haya dentro de la variable repeticion_bucle
 }
