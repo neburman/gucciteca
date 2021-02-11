@@ -1,5 +1,6 @@
 var cont=0;
 var imgs = document.getElementById("img");
+var body = document.getElementById("body");
 function imagenes(){
     if(cont==0){
         document.getElementById("img").src="imagenes/imagen1.jpg";
@@ -24,10 +25,13 @@ var cerrar = document.getElementsByClassName("cerrar")[0];
 
 boton.onclick = function() {
   emergente.style.display = "block";
+  body.style.overflow = "hidden";
+
 }
 
 cerrar.onclick = function() {
   emergente.style.display = "none";
+  body.style.overflow = "auto";
 }
 
 window.onclick = function(event) {
