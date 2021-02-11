@@ -2,7 +2,7 @@
     //conectamos con el servidor
     $db='id16128363_gucciteca';
     $user='id16128363_neburman';
-    $server='database.000webhost.com';
+    $server='localhost';
     $pass='SomorrostroDam1#' ;
     
     $conecta=mysqli_connect($server,$user,$pass,$db);
@@ -18,7 +18,5 @@
     $ejecutar = mysqli_query($conecta,$sql);
     if(!$ejecutar){
         echo "Ha sucedido un error en la insercion";
-    }else{
-        echo "Datos introducidos de manera satisfactoria";
     }
 ?>

@@ -408,6 +408,10 @@ form{
         width: 100%;
         font-size: 4.5vw;
     }
+    section#textodestacado{
+        justify-content: center;
+        width: 53%;
+    }
     p{
         font-size: 1.75vw;
         margin-left: 3%;
