@@ -1,27 +1,49 @@
 @font-face{
     font-family: "BigShoulders";
-    src: url("fuentes/BigShouldersStencilText-Medium.ttf");
+    src: url("../../fuentes/BigShouldersStencilText-Medium.ttf");
 }
 @font-face{
     font-family: "Goldman";
-    src: url("fuentes/Goldman-Regular.ttf");
+    src: url("../../fuentes/Goldman-Regular.ttf");
 }
 html{
     background-color: #2e528b;
 }
 body{
     background-color: #2e528b;
-    text-align: center;
-    font-size: 1.2vw;
     width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 0 auto 0 auto;
+    text-align: center;
 }
 header{
     border: black 2px solid;
     background-color: #335644;
     margin: 0.5% 0;
     padding: 2% 0;
+}
+h1{
+    font-size: 4vw;
+    margin: 0;
+    padding: 1% 0;
+    text-align: center;
+    background-color: #c72030;
+    color: #c3b14a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: BigShoulders, sans-serif;
+}
+h2{
+    font-size: 3vw;
+    margin: 0;
+    padding: 1% 0;
+    text-align: center;
+    background-color: #c72030;
+    color: #c3b14a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: BigShoulders, sans-serif;
 }
 nav#lista{
     border: black 2px solid;
@@ -70,27 +92,12 @@ ul#Enlaces li ul li{
     position: relative;
     margin-top: 0.5rem;
 }
-h1{
-    font-size: 4vw;
-    margin: 0;
-    padding: 1% 0;
-    text-align: center;
-    background-color: #c72030;
-    color: #c3b14a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-h2{
-    font-size: 2.5vw;
-    border: 0px;
-    border-bottom: black 2px solid;
-    margin: 0 0 0 0;
-    background-color: #c72030;
-    color: #c3b14a;
-}
 h3{
+    font-size: 1.5vw;
     color: #c3b14a;
+}
+p{
+    font-size: 1.5vw;
 }
 article{
     border: black 2px solid;
@@ -147,6 +154,14 @@ article#presentacion p{
 .expiracion {
   color: #c3b14a;
 }
+footer{
+    background-color: gray;
+    font-size: 1vw;
+    border: black 2px solid;
+    padding: 2% 0%;
+    text-align: center;
+    margin: 1% auto;
+}
 @media screen and (max-width: 480px) {
     body{
         font-size: 3vw;
@@ -159,5 +174,25 @@ article#presentacion p{
     }
     h2{
         font-size: 4.5vw;
+    }
+    ul#Enlaces{
+        flex-flow: row wrap;
+    }
+    ul#Enlaces li{
+        width: 20%;
+        margin: auto 2% 2% 2%;
+        list-style-type: none;
+        position: relative;
+        border: white 2px solid;
+        border-radius: 5%;
+        background-color: #333333;
+        padding: 1% 2.25%;
+    }
+    ul#Enlaces li a{
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 3vw;
+        text-align: center;
     }
 }

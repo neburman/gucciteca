@@ -19,4 +19,6 @@
     if(!$ejecutar){
         echo "Ha sucedido un error en la insercion";
     }
+    //cerramos la conexion
+    mysqli_close($conecta);
 ?>

@@ -1,5 +1,5 @@
 * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif;}
+
 .mySlides {display: none}
 img {vertical-align: middle;}
 
@@ -101,5 +101,5 @@ img {vertical-align: middle;}
 /* En pantallas más pequeñas, se reduce el tamaño del texto y los botones*/
 @media only screen and (max-width: 480px) {
   .prev, .next,.text {font-size: 11px}
-  .dot {height: 10px, width: 10px;}
+  .dot {height: 10px; width: 10px;}
 }
