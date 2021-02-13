@@ -53,6 +53,7 @@ button#login_registro{
     font-size: 1vw;
 }
 button#login_registro:hover{
+    cursor: pointer;
     background-color: #aaaaaa;
     opacity: 90%;
 }

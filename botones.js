@@ -40,38 +40,17 @@ window.onclick = function(event) {
   }
 }
 
+function hacer_cambios(ocultar_inicio){
+  var intro=document.getElementById("inicio_sesion");
+  intro.style.display=ocultar_inicio ? "none" : "block";
+  var intro=document.getElementById("registro");
+  intro.style.display=ocultar_inicio ? "block" : "none";
+
+}
 function registro(){
-    var intro=document.getElementById("registro");
-    intro.style.display="block";
-    var intro=document.getElementById("inicio_sesion");
-    intro.style.display="none";
+  hacer_cambios(true);
 }
 
 function iniciar_sesion(){
-    var intro=document.getElementById("inicio_sesion");
-    intro.style.display="block";
-    var intro=document.getElementById("registro");
-    intro.style.display="none";
-    
-}
-
-function registrarUsuario(){
-    let usuario = {
-        nombre: document.getElementById("usuarioRegistro").value,
-        correo: document.getElementById("correoRegistro").value,
-        contraseña: document.getElementById("contrasenaRegistro").value
-    };
-    localStorage.setItem('DatosUsuario',JSON.stringify(usuario)); 
-    bienvenida(usuario.nombre, usuario.correo);
-
-}
-function bienvenida(nombre, correo){
-    document.getElementById("usuario").innerHTML = `Bienvenido ${nombre} este es tu correo ${correo}`;
-}
-function bienvenidaDeCache(){
-    let kike = localStorage.getItem("DatosUsuario");
-    if(kike){
-        let usuario = JSON.parse(kike);
-        bienvenida(usuario.nombre, usuario.correo);
-    }
+  hacer_cambios(false);
 }
