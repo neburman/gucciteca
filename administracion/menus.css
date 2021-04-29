@@ -85,6 +85,10 @@ div.opciones h2 {
     width: 100%;
 }
 div.opciones img{
+    pointer-events: none;
+    width: 100%;
+}
+a.boton{
     width: 100%;
     border: 2px solid black;
 }
