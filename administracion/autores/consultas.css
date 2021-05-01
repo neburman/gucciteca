@@ -1,10 +1,10 @@
 @font-face{
     font-family: "BigShoulders";
-    src: url("../fuentes/BigShouldersStencilText-Medium.ttf");
+    src: url("../../fuentes/BigShouldersStencilText-Medium.ttf");
 }
 @font-face{
     font-family: "Goldman";
-    src: url("../fuentes/Goldman-Regular.ttf");
+    src: url("../../fuentes/Goldman-Regular.ttf");
 }
 html{
     background-color: #2e528b;
@@ -56,49 +56,9 @@ h2#cabecera {
     margin-top: 0;
     width: 100%;
 }
-section.menus {
+section#consulta {
     margin: 5% auto 5% auto;
     border: 1px solid black;
     width: 80%;
     box-shadow: 5px 5px 5px black;
-}
-section#autores, section#libros, section#alquileres, section#clientes, section#multas {
-    display: none;
-}
-section.filas {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 2.5%;
-}
-div.opciones {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 2px solid black;
-    width: 20%;
-    box-shadow: 4px 4px 4px black;
-}
-div.opciones:hover {
-    box-shadow: 4px 4px 4px blue;
-}
-div.opciones:hover > h2, div.opciones:hover > a , div.opciones:hover{
-    color: white;
-    border: 2px solid blue;
-}
-div.opciones h2 {
-    text-align: center;
-    border-bottom: 2px solid black;
-    margin: 0;
-    font-family: Goldman, sans-serif;
-    font-size: 1.75vw;
-    background-color: #c72030;
-    color: #c3b14a;
-    width: 100%;
-}
-div.opciones img{
-    width: 100%;
-}
-a.boton {
-    width: 100%;
 }
