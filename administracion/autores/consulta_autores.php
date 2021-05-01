@@ -25,26 +25,30 @@
     </header>
     <section id="consulta">
         <table>
-            <tr>
-                <td>COD_AUTOR</td>
-                <td>NOMBRE_AUTOR</td>
-                <td>NACIONALIDAD</td>
-                <td>FECHA_NAC</td>
-            </tr>
-            <?php
+            <thead>
+                <tr>
+                    <th>COD_AUTOR</th>
+                    <th>NOMBRE_AUTOR</th>
+                    <th>NACIONALIDAD</th>
+                    <th>FECHA_NAC</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
                 $sql = "SELECT * FROM AUTORES";
                 $consulta = mysqli_query($conectar, $sql);
                 while ($mostrar = mysqli_fetch_array($consulta)) {
                 ?>
-            <tr>
-                <td><?php echo $mostrar['COD_AUTOR']?></td>
-                <td><?php echo $mostrar['NOMBRE_AUTOR']?></td>
-                <td><?php echo $mostrar['NACIONALIDAD']?></td>
-                <td><?php echo $mostrar['FECHA_NAC']?></td>
-            </tr>
-            <?php
-                }
-            ?>
+                <tr>
+                    <td><?php echo $mostrar['COD_AUTOR']?></td>
+                    <td><?php echo $mostrar['NOMBRE_AUTOR']?></td>
+                    <td><?php echo $mostrar['NACIONALIDAD']?></td>
+                    <td><?php echo $mostrar['FECHA_NAC']?></td>
+                </tr>
+                <?php
+                    }
+                ?>
+            </tbody>
         </table>
     </section>
 </body>
