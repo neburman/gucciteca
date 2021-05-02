@@ -1,0 +1,84 @@
+@font-face{
+    font-family: "BigShoulders";
+    src: url("../../fuentes/BigShouldersStencilText-Medium.ttf");
+}
+@font-face{
+    font-family: "Goldman";
+    src: url("../../fuentes/Goldman-Regular.ttf");
+}
+html{
+    background-color: #2e528b;
+}
+body{
+    width: 80%;
+    margin: 0 auto 0 auto;
+    background-color: whitesmoke;
+    border: black 2px solid;
+}
+header{
+    border-top: black 2px solid;
+    border-bottom: black 2px solid;
+    background-color: #335644;
+    margin-bottom: 1%;
+}
+h1{
+    font-family: BigShoulders, sans-serif;
+    text-align: center;
+    background-color: #c72030;
+    color: #c3b14a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header h1 a{
+    text-decoration: none;
+    color: #c3b14a;
+    font-size: 6vw;
+}
+header h1 a:hover{
+    text-decoration: none;
+    color: black;
+}
+header h1 img{
+    vertical-align: middle;
+    height: 15%;
+    width: 15%;
+    margin-left: 5%;
+}
+h2#cabecera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: BigShoulders, sans-serif;
+    font-size: 4vw;
+    background-color: #c72030;
+    color: #c3b14a;
+    margin-top: 0;
+    width: 100%;
+}
+
+p, input {
+    font-family: Goldman, sans-serif;
+    font-size: 1.25vw;
+}
+section#modificar_autor {
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    margin: 5% auto 5% auto;
+    border: 2px solid black;
+    padding: 2%;
+    width: 50%;
+    box-shadow: 5px 5px 5px black;
+}
+form {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 2.5% auto 2.5% auto;
+    background-color: white;
+    padding: 2.5%;
+    border: 2px solid black;
+}
+div#botones{
+    margin: auto;
+}
