@@ -22,4 +22,5 @@
     else {
         echo'<script type="text/javascript">alert("El autor introducido ya esta en la base de datos");</script>';
     }
+    mysqli_close($conectar);
 ?>

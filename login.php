@@ -13,7 +13,7 @@
     $query = mysqli_query($conectar,$sql);
     $numero_filas = mysqli_num_rows($query);
     if($numero_filas == 1) {
-        header("Location: biblioteca.html");
+        header("Location: administracion/menu.html");
     }
     else {
         echo'alert("Contraseña introducida erronea")';

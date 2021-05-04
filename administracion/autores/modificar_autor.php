@@ -25,29 +25,33 @@
     </header>
     <section id="modificar_autor">
         <p>Seleccionar el autor:  
-            <select name="autor" id="autor">
+            <select name="autor" id="select" onchange="pasarInformacion()">
+                <option value="0">--Seleccione un autor--</option>
                 <?php
                     $sql = "SELECT * FROM AUTORES";
                     $consulta = mysqli_query($conectar, $sql);
                     $valor = 1;
                     while ($mostrar = mysqli_fetch_array($consulta)) {
                 ?>
-                <option value="<?php echo $valor?>"><?php echo $mostrar['COD_AUTOR']?>, <?php echo $mostrar['NOMBRE_AUTOR']?></option>
+                <option value="<?php echo $valor?>"><?php echo $mostrar['COD_AUTOR']?>, <?php echo $mostrar['NOMBRE_AUTOR']?>, <?php echo $mostrar['NACIONALIDAD']?>, <?php echo $mostrar['FECHA_NAC']?></option>
                 <?php
                     $valor = $valor + 1;
                     }
+                    mysqli_close($conectar);
                 ?>
             </select>
         </p>
         <form action="anadir_autores.php" method="post">
-            <p>Nombre autor: <input type="text" name="nombre_autor" required></p>
-            <p>Nacionalidad del autor: <input type="text" name="nacionalidad" required></p>
-            <p>Fecha de nacimiento: <input type="date" name="fecha_nac" required></p>
+            <p>Codigo del autor: <input type="text" name="cod_autor" id="cod_autor" disabled></p>
+            <p>Nombre autor: <input type="text" name="nombre_autor" id="nombre_autor" required></p>
+            <p>Nacionalidad del autor: <input type="text" name="nacionalidad" id="nacionalidad" required></p>
+            <p>Fecha de nacimiento: <input type="date" name="fecha_nac" id="fecha_nac" required></p>
             <div id="botones">
                 <input type="submit" value="Insertar">
-                <input type="reset" value="Borrar">
+                <input type="reset" value="Borrar" id="borrar">
             </div>
         </form>
     </section>
+    <script src="utilJS.js"></script>
 </body>
 </html>

@@ -47,6 +47,7 @@
                 </tr>
                 <?php
                     }
+                    mysqli_close($conectar);
                 ?>
             </tbody>
         </table>

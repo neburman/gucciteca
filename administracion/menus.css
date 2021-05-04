@@ -100,5 +100,6 @@ div.opciones img{
     width: 100%;
 }
 a.boton {
+    text-decoration: none;
     width: 100%;
 }
