@@ -47,7 +47,7 @@
             <p>Nacionalidad del autor: <input type="text" name="nacionalidad" id="nacionalidad" required></p>
             <p>Fecha de nacimiento: <input type="date" name="fecha_nac" id="fecha_nac" required></p>
             <div id="botones">
-                <input type="submit" value="Insertar">
+                <input type="submit" value="Modificar">
                 <input type="reset" value="Borrar" id="borrar">
             </div>
         </form>
