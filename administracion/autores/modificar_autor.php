@@ -41,16 +41,17 @@
                 ?>
             </select>
         </p>
-        <form action="anadir_autores.php" method="post">
-            <p>Codigo del autor: <input type="text" name="cod_autor" id="cod_autor" disabled></p>
+        <form action="update_autor.php" method="post">
+            <p>Codigo del autor: <input type="text" name="cod_autor" id="cod_autor" readonly></p>
             <p>Nombre autor: <input type="text" name="nombre_autor" id="nombre_autor" required></p>
             <p>Nacionalidad del autor: <input type="text" name="nacionalidad" id="nacionalidad" required></p>
             <p>Fecha de nacimiento: <input type="date" name="fecha_nac" id="fecha_nac" required></p>
             <div id="botones">
-                <input type="submit" value="Modificar">
+                <input type="submit" value="Modificar" onclick="visualizar()">
                 <input type="reset" value="Borrar" id="borrar">
             </div>
         </form>
+        <button onclick="visualizar()">Visualizar formulario</button>
     </section>
     <script src="utilJS.js"></script>
 </body>

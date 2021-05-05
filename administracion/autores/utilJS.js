@@ -11,3 +11,7 @@ function pasarInformacion() {
         document.getElementById("borrar").click();
     }
 }
+function visualizar() {
+    let datos = document.getElementById("cod_autor").value+" "+document.getElementById("nombre_autor").value+" "+document.getElementById("nacionalidad").value+" "+document.getElementById("fecha_nac").value+"";
+    alert(datos);
+}
