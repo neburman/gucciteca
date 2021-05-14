@@ -12,6 +12,7 @@ function pasarInformacion() {
     }
 }
 function visualizar() {
+<<<<<<< HEAD
     let datos = document.getElementById("cod_autor_delete").value+" "+document.getElementById("nombre_autor_delete").value+" "+document.getElementById("nacionalidad_delete").value+" "+document.getElementById("fecha_nac_delete").value+"";
     alert(datos);
 }
@@ -30,4 +31,8 @@ function eliminar(){
         document.getElementById("borrar_delete").click();
     }
     window.location.href="";
+=======
+    let datos = document.getElementById("cod_autor").value+" "+document.getElementById("nombre_autor").value+" "+document.getElementById("nacionalidad").value+" "+document.getElementById("fecha_nac").value+"";
+    alert(datos);
+>>>>>>> 84e6ea16ede3b00afc473b49f9b6437594db1d37
 }

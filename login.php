@@ -6,8 +6,11 @@
     $contrasena='manolcabron' ;
     $conectar=mysqli_connect($server,$usuario,$contrasena,$basededatos);
 
+<<<<<<< HEAD
     session_start();
 
+=======
+>>>>>>> 84e6ea16ede3b00afc473b49f9b6437594db1d37
     $usuario = $_POST['Usuario'];
     $contrasena = $_POST['Contrasena'];
 
@@ -15,8 +18,12 @@
     $query = mysqli_query($conectar,$sql);
     $numero_filas = mysqli_num_rows($query);
     if($numero_filas == 1) {
+<<<<<<< HEAD
         $_SESSION['logueado'] = true;
         header("Location: administracion/menu.php");
+=======
+        header("Location: administracion/menu.html");
+>>>>>>> 84e6ea16ede3b00afc473b49f9b6437594db1d37
     }
     else {
         echo'alert("Contraseña introducida erronea")';
