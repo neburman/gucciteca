@@ -16,12 +16,12 @@
         }
         if ($contador != 0) {
             if(unlink("$archivo")){
-                echo'<script type="text/javascript">alert("El archivo xml se ha subido correctamente");</script>';
+                echo'<script type="text/javascript">alert("El archivo xml se ha subido correctamente");window.location.href="xml.php"</script>';
             }
         }
     }   
     else {
-        echo "La subida del archivo a fallado";
+        echo'<script type="text/javascript">alert("La subida del archivo a fallado");window.location.href="xml.php";</script>';
     }
     mysqli_close($conectar);
 ?>
