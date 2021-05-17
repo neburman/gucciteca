@@ -5,7 +5,7 @@
     $tipo = $_POST['tipo_libro'];
     $editorial = $_POST['editorial_libro'];
     $cod_autor = explode(", ", $_POST['codigo_autor']);
-    $sql = "SELECT * FROM LIBROS WHERE NOMBRE = '$titulo'";
+    $sql = "SELECT * FROM LIBROS WHERE NOMBRE = '$titulo' AND EDITORIAL='$editorial'";
     $query = mysqli_query($conectar,$sql);
     $numero_filas = mysqli_num_rows($query);
     if($numero_filas != 1) {

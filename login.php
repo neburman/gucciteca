@@ -19,8 +19,7 @@
         header("Location: administracion/menu.php");
     }
     else {
-        echo'alert("Contraseña introducida erronea")';
-        header("Location: index.html");
+        echo'<script type="text/javascript">alert("Contraseña introducida erronea");window.location.href="index.html";</script>';
     }
     mysqli_close($conectar);
 ?>

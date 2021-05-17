@@ -124,6 +124,7 @@ form#update {
     background-color: white;
     padding: 2.5%;
     border: 2px solid black;
+    box-shadow: 5px 5px 5px black;
 }
 form#delete {
     display: none;

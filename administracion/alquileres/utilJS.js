@@ -30,6 +30,7 @@ function eliminar(){
     if(document.getElementById("select_delete").selectedIndex != 0){
         let adatos_option = datos_option.split(", ");
         document.getElementById("cod_alquiler_delete").value = adatos_option[0];
+        document.getElementById("cod_copia_delete").value = adatos_option[4];
         if(confirm("Esta accion eliminara el alquiler "+adatos_option[0]+"\nDeseas continuar?")){
             document.getElementById("delete").style.display="block";
             document.getElementById("boton_eliminar").click();

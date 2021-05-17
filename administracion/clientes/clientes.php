@@ -97,7 +97,7 @@
             </select>
         </p>
         <form action="update_cliente.php" method="post" id="update">
-            <p>DNI del cliente: <input type="text" name="dni_cliente" id="dni_cliente_update" required></p>
+            <p>DNI del cliente: <input type="text" name="dni_cliente" id="dni_cliente_update" readonly></p>
             <p>Nombre del cliente: <input type="text" name="nombre_cliente" id="nombre_cliente" required></p>
             <p>Fecha de nacimiento:  <input type="date" name="fecha_nac" id="fecha_nac" required></p>
             <p>Multa: <input type="text" name="multa" placeholder="SI/NO" id="multa" required></p>

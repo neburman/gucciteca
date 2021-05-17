@@ -147,6 +147,7 @@
         </p>
         <form action="delete_alquiler.php" method="post" id="delete">
             <p>Codigo del alquiler: <input type="text" name="cod_alquiler" id="cod_alquiler_delete" readonly></p>
+            <p>Codigo de la copia: <input type="text" name="cod_copia" id="cod_copia_delete" readonly></p>
             <div id="botones">
                 <input type="submit" value="Eliminar" id="boton_eliminar">
                 <input type="reset" value="Borrar" id="borrar_delete">

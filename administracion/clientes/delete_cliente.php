@@ -5,8 +5,7 @@
     if($query = mysqli_query($conectar,$sql)){
         echo'<script type="text/javascript">alert("El cliente se ha eliminado de manera exitosa");window.location.href="clientes.php";</script>';
     }else{
-        //echo'<script type="text/javascript">alert("No ha sido posible eliminar al cliente");window.location.href="clientes.php";</script>';
-        echo $dni_cliente;
+        echo'<script type="text/javascript">alert("No ha sido posible eliminar al cliente");window.location.href="clientes.php";</script>';
     }
     mysqli_close($conectar);
 ?>

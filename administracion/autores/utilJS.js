@@ -29,5 +29,4 @@ function eliminar(){
     else{
         document.getElementById("borrar_delete").click();
     }
-    window.location.href="";
 }
