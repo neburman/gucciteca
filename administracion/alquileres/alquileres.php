@@ -118,7 +118,7 @@
             <p>Codigo de alquiler: <input type="text" name="codigo_alquiler" id="codigo_alquiler_update" required></p>
             <p>Codigo de copia: <input type="text" name="codigo_copia" id="codigo_copia_update" required></p>
             <p>Dni cliente: <input type="text" name="dni_cliente_copia" id="dni_cliente_update" required></p>
-            <p>Multado hasta: <input type="date" name="dias_multa_copia" id="dias_multa_update" required></p>
+            <p>Multado hasta: <input type="date" name="dias_multa_copia" id="dias_multa_update"></p>
             <div id="botones">
                 <input type="submit" value="Modificar" id="boton_update">
                 <input type="reset" value="Borrar" id="borrar_update">

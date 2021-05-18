@@ -66,19 +66,24 @@
 
     <section id="anadir_cliente">
         <h2 class="secciones">AÑADIR UN NUEVO CLIENTE</h2>
-        <form action="insertar_clientes.php" method="post" id="insert">
-            <p>DNI Cliente: <input type="text" name="dni_cliente" id="dni_cliente" maxlength="9" placeholder="22222222A" required></p>
-            <p>Nombre y primer apellido: <input type="text" name="nombre_cliente" required></p>
-            <p>Fecha de nacimiento: <input type="date" name="fecha_nac" required></p>
-            <div id="botones">
+        <div id="formulario">
+            <form action="insertar_clientes.php" method="post" id="insert">
+                <p>DNI Cliente: <input type="text" name="dni_cliente" id="dni_cliente" maxlength="9" placeholder="22222222A" required></p>
+                <p>Nombre y primer apellido: <input type="text" name="nombre_cliente" required></p>
+                <p>Fecha de nacimiento: <input type="date" name="fecha_nac" required></p>
+                <div id="botones">
+                    <input type="submit" value="Insertar" id="insertar_cliente">
+                    <input type="reset" value="Borrar" id="borrar_formulario">
+                </div>
+            </form>
+            <div id="cliente_boton">
                 <button onclick="comprobarDNI()">Insertar</button>
-                <input type="submit" value="Insertar" id="insertar_cliente">
-                <input type="reset" value="Borrar">
+                <button onclick="borrar()">Borrar</button>
             </div>
-        </form>
+        </div>
     </section>
 
-    <section id="modificar_autor">
+    <section id="modificar_cliente">
         <h2 class="secciones">MODIFICAR UN CLIENTE</h2>
         <p>Seleccionar el CLIENTE:  
             <select name="cliente" id="select_update" onchange="pasarInformacion()">
@@ -109,7 +114,7 @@
         </form>
     </section>
 
-    <section id="borrar_autor">
+    <section id="borrar_cliente">
         <h2 class="secciones">ELIMINAR UN CLIENTE</h2>
         <p>Seleccionar el CLIENTE:  
             <select name="cliente" id="select_delete">

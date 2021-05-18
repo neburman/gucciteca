@@ -41,3 +41,6 @@ function comprobarDNI(){
         alert("El dni introducido es demasiado corto");
     }        
 }
+function borrar() {
+    document.getElementById("borrar_formulario").click();
+}

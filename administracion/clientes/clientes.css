@@ -107,15 +107,22 @@ p, input, select, button {
     font-family: Goldman, sans-serif;
     font-size: 1.25vw;
 }
-form#insert {
+div#formulario{
     display: flex;
     flex-flow: column wrap;
+    align-items: center;
     width: 60%;
     margin: 2.5% auto 2.5% auto;
     background-color: white;
     padding: 2.5%;
     border: 2px solid black;
     box-shadow: 5px 5px 5px black;
+}
+form#insert {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    padding: 2.5%;
 }
 form#update {
     display: flex;
@@ -124,6 +131,7 @@ form#update {
     background-color: white;
     padding: 2.5%;
     border: 2px solid black;
+    box-shadow: 5px 5px 5px black;
 }
 form#delete {
     display: none;
@@ -131,6 +139,6 @@ form#delete {
 div#botones{
     margin: auto;
 }
-#insertar_cliente {
+#insertar_cliente, #borrar_formulario {
     display: none;
 }
