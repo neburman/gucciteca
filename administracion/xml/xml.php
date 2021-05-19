@@ -33,7 +33,7 @@
     </section>
     <section class="insertar_xml">
         <h2 class="secciones">INSERTAR XML LIBROS</h2>
-        <form enctype="multipart/form-data" action="insertar_libros.php">
+        <form enctype="multipart/form-data" action="insertar_libros.php" method="POST">
             <input type="file" name="libros_xml" accept=".xml"> <br>
             <div id="botones">
                 <input type="submit" value="Insertar">
